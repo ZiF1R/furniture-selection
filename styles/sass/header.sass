@@ -1,0 +1,48 @@
+@import "./vars"
+
+header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    img
+        height: 650px
+        width: 400px
+        user-select: none
+        clip-path: circle(64.7% at 50% 46%)
+
+.header__info h1
+    margin-bottom: 0
+
+.header__description
+    font-family: 'PT Sans', sans-serif
+    font-weight: 400
+    font-size: 1.55em
+    margin-top: 20px
+
+.button__description
+    font-weight: 400
+    font-size: 0.85em
+    color: $color-gray
+    margin-bottom: 8px
+
+.header__benefits
+    display: grid
+    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 1fr
+    margin: 50px 0
+
+    .benefit
+        display: flex
+        align-items: center
+        flex-direction: row
+
+        p
+            padding: 0 15px
+            line-height: 140%
+            font-weight: 400
+            font-size: 0.85em
+
+        img
+            width: 30px
+            height: 30px

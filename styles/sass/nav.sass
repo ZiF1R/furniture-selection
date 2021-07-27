@@ -1,0 +1,95 @@
+@import "./vars"
+
+nav, footer
+    display: flex
+    position: relative
+    flex-direction: row
+    justify-content: space-between
+
+    margin: 25px
+    height: 50px
+
+.logo
+    display: flex
+    align-items: center
+    font-weight: 400
+    font-size: 0.8125em
+
+    img
+        margin-right: 30px
+        height: 100%
+
+.contact-tel
+    display: flex
+    align-items: center
+
+    a
+        margin-right: 25px
+
+        font-weight: 500
+        font-size: 1.25em
+        color: $color-gray
+
+    button
+        font-weight: 400
+        font-size: 0.875em
+        color: $color-blue
+
+        border: 2px solid $color-blue
+        border-radius: 8px
+        padding: 7px 22px
+
+        transition: color .25s cubic-bezier(0.645, 0.045, 0.355, 1), background .25s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+        img
+            display: none
+            pointer-events: none
+
+        span
+            pointer-events: none
+
+        &:hover
+            color: #fff
+            background: $color-blue
+
+@media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
+    .logo
+        img
+            height: 90%
+
+    .contact-tel
+        button
+            border: none
+            background: $color-blue
+
+            padding: 9px
+
+            span:not(.button-material__circle)
+                display: none
+
+            img
+                display: block
+
+@media screen and ( max-width: $tablet-start-width - 1px )
+    .logo
+        span
+            display: none
+
+        img
+            height: 100%
+
+    .contact-tel
+        a
+            display: none
+
+        button
+            border: none
+            background: $color-blue
+
+            padding: 11px
+
+            span:not(.button-material__circle)
+                display: none
+
+            img
+                display: block

@@ -42,6 +42,9 @@ button
 a
     text-decoration: none
 
+    &.link_privacy
+        color: $color-blue
+
 h1, h2
     font-weight: 700
 
@@ -53,9 +56,16 @@ h2
     text-align: center
     font-size: 3em
 
+p
+    font-weight: 400
+    font-size: 1.2em
+    line-height: 1.5em
+
 @import "./nav.sass"
 @import "./header.sass"
 @import "./work-stages.sass"
+@import "./notification.sass"
+@import "./forms/get-fulltime-work.sass"
 
 @media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
     body

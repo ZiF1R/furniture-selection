@@ -147,8 +147,32 @@
                             </p>
                         </div>
                     </div>
-                    <img src="./icons/work-stages/Комплект 1.jpg" alt="set 1">
+                    <img draggable="false" src="./icons/work-stages/Комплект 1.jpg" alt="set 1">
                 </div>
+            </div>
+            <div class="notification button-material">
+                <img draggable="false" src="./icons/info.svg" alt="info">
+                <p>Чем больше объектов вы укомплектовываете, тем больше вы зарабатываете</p>
+            </div>
+            <div class="get-fulltime-work">
+                <p>
+                    Заполните форму, чтобы получить постоянную<br>
+                    работу подборщиком мебели в Domeo
+                </p>
+                <form>
+                    <span>Ввдите ваше имя</span>
+                    <span>Ввдите ваш телефон</span>
+                    <input id="name" type="text" placeholder="Например, Алексей">
+                    <input id="telephone" data-tel-input type="tel" maxlength="18" placeholder="+7 (___) ___ - __ - __">
+                    <button onclick="event.preventDefault()" class="button button_primary button-material">
+                        Получить<br>
+                        постоянную работу
+                    </button>
+                    <p>
+                        Нажимая на кнопку, вы даёте согласие<br> на обработку персональных данных и<br> соглашаетесь c
+                        <a href="#" class="link_privacy">политикой конфиденциальности</a>
+                    </p>
+                </form>
             </div>
         </main>
 
@@ -172,6 +196,7 @@
         </footer>
     </div>
     
+    <script src="./plugins/telephone-mask/index.js"></script>
     <script src="./plugins/material-button/index.js"></script>
 
 </body>

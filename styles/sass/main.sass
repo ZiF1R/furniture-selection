@@ -25,6 +25,8 @@ button
     user-select: none
 
 .button
+    width: fit-content
+    height: fit-content
     padding: 12px 50px
     color: #fff
     border-radius: 8px
@@ -44,17 +46,20 @@ h1, h2
     font-weight: 700
 
 h1
-    font-size: 3.3em
+    margin-bottom: 0
+    font-size: 3.5em
 
 h2
-    font-size: 2.8em
+    text-align: center
+    font-size: 3em
 
 @import "./nav.sass"
 @import "./header.sass"
+@import "./work-stages.sass"
 
 @media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
     body
-        font-size: 12px
+        font-size: 14px
 
     .content
         width: 100%
@@ -62,8 +67,11 @@ h2
 
 @media screen and ( max-width: $tablet-start-width - 1px )
     body
-        font-size: 10px
+        font-size: 12px
 
     .content
         width: 100%
         padding: 0 30px
+
+    .button
+        width: 100%

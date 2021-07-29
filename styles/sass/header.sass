@@ -1,18 +1,37 @@
 @import "./vars"
 
 header
-    display: flex
-    flex-direction: row
-    justify-content: space-between
+    display: grid
+    position: relative
+    grid-template-areas: "title img" "title_desc img" "list img" "button_desc img" "button img"
+
+    & > *
+        height: fit-content
 
     img
-        height: 650px
+        justify-self: self-end
+        height: 100%
         width: 400px
         user-select: none
         clip-path: circle(64.7% at 50% 46%)
 
-.header__info h1
-    margin-bottom: 0
+h1
+    grid-area: title
+
+.header__description
+    grid-area: title_desc
+
+.header__benefits
+    grid-area: list
+
+.button__description
+    grid-area: button_desc
+
+header > button
+    grid-area: button
+
+header > img
+    grid-area: img
 
 .header__description
     font-family: 'PT Sans', sans-serif
@@ -46,3 +65,39 @@ header
         img
             width: 30px
             height: 30px
+
+@media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
+    header
+        grid-template-areas: "title title" "title_desc img" "list img" "button_desc img" "button img"
+
+        img
+            width: 250px
+
+    .header__benefits
+        grid-template-rows: 1fr 1fr 1fr 1fr
+        grid-template-columns: 1fr
+        margin: 30px 0
+
+@media screen and ( max-width: $tablet-start-width - 1px )
+    header
+        grid-template-areas: "title" "title_desc" "img" "list " "button_desc" "button"
+        grid-template-columns: 1fr
+
+        & *
+            text-align: center
+
+        img
+            width: 60%
+            justify-self: center
+
+    .header__benefits
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 10px 0
+
+        .benefit
+            display: flex
+            align-items: center
+            flex-direction: column
+            margin-bottom: 5px

@@ -1,0 +1,123 @@
+@import "./vars"
+
+.work-stages
+    margin-top: 100px
+
+    & > p
+        margin: 10px 0 40px 0
+        text-align: center
+        color: $color-gray
+
+    & p
+        font-weight: 400
+        font-size: 1.2em
+        line-height: 1.5em
+
+main
+    h2
+        margin-bottom: 0
+
+.work-stages__content
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.content__stages
+    display: flex
+    flex-direction: column
+
+.stages__stage
+    p
+        margin: 0 0 30px 0
+
+.stage__stage-number
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    .number
+        margin: 0 10px
+        color: $color-blue
+        font-weight: 700
+        font-size: 2em
+
+    & > span:first-child,
+    & > span:last-child
+        display: flex
+        position: relative
+        flex-direction: row
+        align-items: center
+        width: 40px
+        height: 1.5px
+        background: $color-blue
+
+        &::before
+            position: absolute
+            content: ""
+            width: 7px
+            height: 7px
+            background: inherit
+            transform: rotate(45deg)
+
+    & > span:first-child
+        &::before
+            right: 0
+
+@media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
+    .work-stages__content
+        flex-direction: column
+        justify-content: normal
+        align-items: center
+
+        img
+            width: 80%
+            height: 80%
+
+    .stages__stage
+        p
+            text-align: center
+
+    .stage__stage-number
+        justify-content: center
+
+        & > span:first-child,
+        & > span:last-child
+            width: 40px
+            height: 1.2px
+
+            &::before
+                width: 6px
+                height: 6px
+
+@media screen and ( max-width: $tablet-start-width - 1px )
+    .work-stages
+        margin-top: 70px
+
+        & > p
+            margin: 5px 0 20px 0
+
+    .work-stages__content
+        flex-direction: column
+        justify-content: normal
+        align-items: center
+
+    .stages__stage
+        p
+            margin: 0 0 15px 0
+            text-align: center
+
+    .stage__stage-number
+        justify-content: center
+
+        & > span:first-child,
+        & > span:last-child
+            width: 40px
+            height: 1px
+
+            &::before
+                width: 4px
+                height: 4px
+
+    .work-stages__content
+        img
+            display: none

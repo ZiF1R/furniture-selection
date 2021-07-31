@@ -91,7 +91,7 @@
         </header>
 
         <main>
-            <div class="work-stages">
+            <section class="work-stages">
                 <h2>Ваша работа будет состоять из 5 этапов</h2>
                 <p>на каждом этапе вы взаимодействуете с ...</p>
                 <div class="work-stages__content">
@@ -149,19 +149,21 @@
                     </div>
                     <img draggable="false" src="./icons/work-stages/Комплект 1.jpg" alt="set 1">
                 </div>
-            </div>
+            </section>
+
             <div class="notification button-material">
                 <img draggable="false" src="./icons/info.svg" alt="info">
                 <p>Чем больше объектов вы укомплектовываете, тем больше вы зарабатываете</p>
             </div>
-            <div class="get-fulltime-work">
+
+            <section class="get-fulltime-work">
                 <p>
                     Заполните форму, чтобы получить постоянную<br>
                     работу подборщиком мебели в Domeo
                 </p>
                 <form>
-                    <span>Ввдите ваше имя</span>
-                    <span>Ввдите ваш телефон</span>
+                    <span class="name-desc">Введите ваше имя</span>
+                    <span class="tel-desc">Введите ваш телефон</span>
                     <input id="name" type="text" placeholder="Например, Алексей">
                     <input id="telephone" data-tel-input type="tel" maxlength="18" placeholder="+7 (___) ___ - __ - __">
                     <button onclick="event.preventDefault()" class="button button_primary button-material">
@@ -173,7 +175,172 @@
                         <a href="#" class="link_privacy">политикой конфиденциальности</a>
                     </p>
                 </form>
+            </section>
+
+            <section class="conditions-wrapper">
+                <h2>
+                    Даем лучшие условия труда<br>
+                    для работы в Москве
+                </h2>
+                <p>компенсируем высокие требования, лучшими условиями</p>
+                <div class="conditions">
+                    <div class="conditions__condition">
+                        <span>01</span>
+                        <p>Возможность работать вахтовым методом</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>02</span>
+                        <p>Компенсируем затраты на проезд и ГСМ к удаленным объектам</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>03</span>
+                        <p>Погрузку-разгрузку выполняют только подрядчики, а не мастера</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>04</span>
+                        <p>Сертификация и квалификации от производителей Knauf, Tikkurila Rehau и др.</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>05</span>
+                        <p>Карьерный рост до: бригадира, прораба, начальника участка и так далее</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>06</span>
+                        <p>Прямой контакт с руководством компании для решения любых финансовых вопросов</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>07</span>
+                        <p>Внедрение инновационных материалов и технологий для облегчения труда</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>08</span>
+                        <p>Корпоративная спец. одежда</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>09</span>
+                        <p>Объекты подбираются ближе к вашему месту жительства</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>10</span>
+                        <p>100% загрузка работой без простоев</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="notification button-material">
+                <img draggable="false" src="./icons/info.svg" alt="info">
+                <p>Мы понимаем, что хорошие мастера хотят получать большую зарплату и уважительное отношение к себе и своему труду, по этому мы делаем огромные усилия для комфортных условий работы в нашей компании</p>
             </div>
+
+            <section class="calculate-salary">
+                <h2>
+                    Рассчитайте вашу будущую зарплату<br>
+                    в Domeo
+                </h2>
+                <p>
+                    ответьте на 3 ключевых вопроса по которым мы определим вашу<br>
+                    точную зарплату
+                </p>
+                <form class="step step-1">
+                    <h3>Сколько объектов вы готовы укомплектовывать в месяц?</h3>
+                    <p>в выбранной ранее специализации</p>
+
+                    <div class="step__answers">
+                        <label>
+                            <input type="radio" name="complect" checked>
+                            <span>1-5</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="complect">
+                            <span>5-10</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="complect">
+                            <span>Более 10</span>
+                        </label>
+                    </div>
+
+                    <div class="step__next">
+                        <button onclick="event.preventDefault()" class="button button_primary button-material next-step">
+                            далее
+                        </button>
+                    </div>
+                </form>
+                <form class="step step-2">
+                    <h3>Сколько у вас лет опыта?</h3>
+                    <p>в комплектации мебели</p>
+
+                    <div class="step__answers">
+                        <label>
+                            <input type="radio" name="experience" checked>
+                            <span>До 1 года</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="experience">
+                            <span>От 2 до 3 лет</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="experience">
+                            <span>От 3 и более</span>
+                        </label>
+                    </div>
+
+                    <div class="step__next">
+                        <button onclick="event.preventDefault()" class="button button_primary button-material next-step">
+                            далее
+                        </button>
+                        <button onclick="event.preventDefault()" class="button button_secondary button-material previous-step">
+                            Назад
+                        </button>
+                    </div>
+                </form>
+                <form class="step step-3">
+                    <h3>Сколько объектов вы укомплектовали?</h3>
+                    <p>в выбранной ранее специализации</p>
+
+                    <div class="step__answers">
+                        <label>
+                            <input type="radio" name="objects" checked>
+                            <span>От 1 - 10</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="objects">
+                            <span>От 10 - 50</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="objects">
+                            <span>Более 50</span>
+                        </label>
+                    </div>
+
+                    <div class="step__next">
+                        <button onclick="event.preventDefault()" class="button button_primary button-material next-step">
+                            далее
+                        </button>
+                        <button onclick="event.preventDefault()" class="button button_secondary button-material previous-step">
+                            Назад
+                        </button>
+                    </div>
+                </form>
+                <div class="step step-4">
+                    <h3>Остался последний шаг</h3>
+                    <p>заполните форму для расчет вашей будущей зарплаты</p>
+                    <form>
+                        <span class="name-desc">Введите ваше имя</span>
+                        <span class="tel-desc">Введите ваш телефон</span>
+                        <input id="name" type="text" placeholder="Например, Алексей">
+                        <input id="telephone" data-tel-input type="tel" maxlength="18" placeholder="+7 (___) ___ - __ - __">
+                        <button onclick="event.preventDefault()" class="button button_primary button-material">
+                            Рассчитать<br>
+                            заработную плату
+                        </button>
+                        <p>
+                            Нажимая на кнопку, вы даёте согласие<br> на обработку персональных данных и<br> соглашаетесь c
+                            <a href="#" class="link_privacy">политикой конфиденциальности</a>
+                        </p>
+                    </form>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -196,6 +363,7 @@
         </footer>
     </div>
     
+    <script src="./scripts/get-salary.js"></script>
     <script src="./plugins/telephone-mask/index.js"></script>
     <script src="./plugins/material-button/index.js"></script>
 

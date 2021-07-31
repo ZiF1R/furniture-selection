@@ -1,0 +1,38 @@
+@import "./vars"
+
+.conditions
+    display: flex
+    flex-wrap: wrap
+    margin: 40px 0
+    gap: 40px 30px
+
+    &__condition
+        display: flex
+        position: relative
+        justify-content: center
+        align-items: center
+        min-height: 88px
+        flex: 1 1 40%
+
+        border: 1px solid #E0E0E0
+        border-radius: 4px
+
+    span
+        position: absolute
+        top: -40%
+
+        color: $color-blue
+        font-size: 3em
+        font-weight: 700
+        font-family: 'PT Serif', serif
+
+        user-select: none
+
+    p
+        padding: 15px 20px 5px
+        text-align: center
+        margin: 0
+
+@media screen and ( max-width: $tablet-start-width - 1px )
+    .conditions
+        flex-direction: column

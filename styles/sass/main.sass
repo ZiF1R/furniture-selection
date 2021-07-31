@@ -1,7 +1,7 @@
 @import "./vars"
 
 *
-    box-sizing: border-box
+    box-sizing: border-box!important
 
 body
     font-size: 16px
@@ -17,6 +17,12 @@ body
     width: $standart-start-width
     margin: auto
 
+section
+    & > p
+        margin: 10px 0 40px 0
+        text-align: center
+        color: $color-gray
+
 button
     outline: none
     border: none
@@ -28,16 +34,33 @@ button
     width: fit-content
     height: fit-content
     padding: 12px 50px
-    color: #fff
     border-radius: 8px
-    background: $color-blue
 
     &_primary
+        color: #fff
+        background: $color-blue
         text-transform: uppercase
         font-size: 0.8em
         font-weight: 700
         letter-spacing: 3%
         box-shadow: 4px 10px 30px rgba(47, 128, 237, 0.35)
+
+    &_secondary
+        color: $color-blue
+        background: #fff
+        text-transform: uppercase
+        font-size: 0.8em
+        font-weight: 700
+        letter-spacing: 3%
+
+        border: 1px solid $color-blue
+        border-radius: 8px
+        transition: all .21s ease-in-out
+
+        &:hover
+            color: #fff
+            background: $color-blue
+            box-shadow: 4px 10px 30px rgba(47, 128, 237, 0.35)
 
 a
     text-decoration: none
@@ -56,16 +79,23 @@ h2
     text-align: center
     font-size: 3em
 
+h3
+    font-size: 1.5em
+    font-weight: 500
+    text-align: center
+
 p
     font-weight: 400
     font-size: 1.2em
     line-height: 1.5em
 
-@import "./nav.sass"
-@import "./header.sass"
-@import "./work-stages.sass"
-@import "./notification.sass"
-@import "./forms/get-fulltime-work.sass"
+@import "./nav"
+@import "./header"
+@import "./work-stages"
+@import "./notification"
+@import "./forms/get-fulltime-work"
+@import "./conditions"
+@import "./forms/calculate-salary"
 
 @media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
     body

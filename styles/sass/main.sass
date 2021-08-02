@@ -70,6 +70,7 @@ a
 
 h1, h2
     font-weight: 700
+    word-break: break-word
 
 h1
     margin-bottom: 0
@@ -89,6 +90,9 @@ p
     font-size: 1.2em
     line-height: 1.5em
 
+section
+    margin: 100px 0
+
 @import "./nav"
 @import "./header"
 @import "./work-stages"
@@ -96,6 +100,10 @@ p
 @import "./forms/get-fulltime-work"
 @import "./conditions"
 @import "./forms/calculate-salary"
+@import "./get-work-steps"
+@import "./agreements"
+@import "./online-interview"
+@import "./location"
 
 @media screen and ( max-width: $standart-start-width - 1px ) and  (min-width: $tablet-start-width )
     body
@@ -111,7 +119,7 @@ p
 
     .content
         width: 100%
-        padding: 0 30px
+        padding: 0 20px
 
     .button
         width: 100%

@@ -15,6 +15,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!--? Google Maps Api -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./scripts/google-maps-api.js"></script>
+
     <title>Подбор мебели</title>
 </head>
 <body>
@@ -41,13 +45,12 @@
 
         <header>
             <h1>
-                Ищем подборщиков мебели<br>
-                по дизайн проектам<br>
-                на постоянную работу
+                Вакансия:<br>
+                комплектатор интерьера
             </h1>
             <p class="header__description">
-                Трудоустройство без московской прописки,<br>
-                с «белой» зарплатой от 150 000 ₽ до 300 000 ₽ 
+                Работа с лучшими условиями в отрасли с «белой»<br>
+                зарплатой от 150 000 ₽ до 300 000 ₽ в Domeo! 
             </p>
             <div class="header__benefits">
                 <div class="benefit">
@@ -91,8 +94,58 @@
         </header>
 
         <main>
+            <section class="conditions-wrapper">
+                <h2>
+                    В Domeo лучшие условия для работы<br>
+                    в сфере комплектации интерьера
+                </h2>
+                <p>компенсируем высокие требования, лучшими условиями</p>
+                <div class="conditions">
+                    <div class="conditions__condition">
+                        <span>01</span>
+                        <p>Возможность работать попроектно в удобном для Вас графике</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>02</span>
+                        <p>Нет потолка доходов. Мы хотим, чтобы вы достойно зарабатывали</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>03</span>
+                        <p>«Белая» оплата — возможность брать кредиты или ипотеку</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>04</span>
+                        <p>Интересные и смелые проекты для реализации творческого потенциал</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>05</span>
+                        <p>Карьерный рост до: руководителя группы или директора департамента</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>06</span>
+                        <p>Прямой контакт с руководством компании для решения любых вопросов</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>07</span>
+                        <p>Особая корпоративная среда: йога по утрам, пробежки,<br>
+                            сумасшедшие корпоративы</p>
+                    </div>
+                    <div class="conditions__condition">
+                        <span>08</span>
+                        <p>Дружный молодой коллектив. Амбициозный проект</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="notification button-material">
+                <img draggable="false" src="./icons/info.svg" alt="info">
+                <p>Мы понимаем, что хорошие мастера хотят получать большую зарплату и уважительное отношение к себе и своему труду, по этому мы делаем огромные усилия для комфортных условий работы в нашей компании</p>
+            </div>
+
             <section class="work-stages">
-                <h2>Ваша работа будет состоять из 5 этапов</h2>
+                <h2>
+                    Ваша работа будет состоять из 5 этапов
+                </h2>
                 <p>на каждом этапе вы взаимодействуете с ...</p>
                 <div class="work-stages__content">
                     <div class="content__stages">
@@ -176,61 +229,6 @@
                     </p>
                 </form>
             </section>
-
-            <section class="conditions-wrapper">
-                <h2>
-                    Даем лучшие условия труда<br>
-                    для работы в Москве
-                </h2>
-                <p>компенсируем высокие требования, лучшими условиями</p>
-                <div class="conditions">
-                    <div class="conditions__condition">
-                        <span>01</span>
-                        <p>Возможность работать вахтовым методом</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>02</span>
-                        <p>Компенсируем затраты на проезд и ГСМ к удаленным объектам</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>03</span>
-                        <p>Погрузку-разгрузку выполняют только подрядчики, а не мастера</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>04</span>
-                        <p>Сертификация и квалификации от производителей Knauf, Tikkurila Rehau и др.</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>05</span>
-                        <p>Карьерный рост до: бригадира, прораба, начальника участка и так далее</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>06</span>
-                        <p>Прямой контакт с руководством компании для решения любых финансовых вопросов</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>07</span>
-                        <p>Внедрение инновационных материалов и технологий для облегчения труда</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>08</span>
-                        <p>Корпоративная спец. одежда</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>09</span>
-                        <p>Объекты подбираются ближе к вашему месту жительства</p>
-                    </div>
-                    <div class="conditions__condition">
-                        <span>10</span>
-                        <p>100% загрузка работой без простоев</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="notification button-material">
-                <img draggable="false" src="./icons/info.svg" alt="info">
-                <p>Мы понимаем, что хорошие мастера хотят получать большую зарплату и уважительное отношение к себе и своему труду, по этому мы делаем огромные усилия для комфортных условий работы в нашей компании</p>
-            </div>
 
             <section class="calculate-salary">
                 <h2>
@@ -341,6 +339,171 @@
                     </form>
                 </div>
             </section>
+
+            <section class="get-work">
+                <h2>
+                    Устройтесь на работу вашей мечты<br>
+                    за 4 шага
+                </h2>
+                <p>самое главное начать, ведь места ограничены</p>
+                <div class="get-work__steps">
+                    <div class="steps__step">
+                        <span>01</span>
+                        <p>
+                            Отправьте<br>
+                            заявку на сайте
+                        </p>
+                        <img src="./icons/get-work-steps/request.svg" alt="request">
+                    </div>
+                    <div class="steps__step">
+                        <span>02</span>
+                        <p>Пройдите собеседование по телефону</p>
+                        <img src="./icons/get-work-steps/phone.svg" alt="phone">
+                    </div>
+                    <div class="steps__step">
+                        <span>03</span>
+                        <p>Пройдите собеседование в офисе</p>
+                        <img src="./icons/get-work-steps/chair.svg" alt="chair">
+                    </div>
+                    <div class="steps__step">
+                        <span>04</span>
+                        <p>Приступите к работе в Domeo</p>
+                        <img src="./icons/get-work-steps/case.svg" alt="case">
+                    </div>
+                </div>
+            </section>
+
+            <section class="agreements">
+                <h2>
+                    Честность — <br>
+                    краеугольный камень общения
+                </h2>
+                <p>Не обманываем с зарплатой и другими договоренностями</p>
+                <div class="video-desc">
+                    <img src="./icons/timer.svg" alt="timer">
+                    <p>Узнайте больше о компании Domeo за 1 минуту</p>
+                </div>
+                <div class="agreements__content">
+                    <video controls src=""></video>
+                    <div class="content__text">
+                        <p>Domeo работает с 2010 года.</p>
+                        <p>За это время мы создали бизнес-структуру, которая работает как дорогие швейцарские часы.</p>
+                        <p>
+                            Секрет нашего успеха в самых лучших условиях и высокой зарплате для мастеров, в честности и прозрачности с
+                            людьми.
+                        </p>
+                        <p>Мы ценим мастеров с большим опытом, а также создаём все условия для качественной работы.</p>
+                        <p>Присоединяйтесь к нам прямо сейчас!</p>
+                        <button class="button button_primary button-material">Присоединиться к Domeo</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="notification button-material">
+                <img draggable="false" src="./icons/info.svg" alt="info">
+                <p>Мы ищем людей на постоянную работу.<br>
+                    Нам нужны мастера для сотрудничества на долгие годы.</p>
+            </div>
+
+            <section class="online-interview">
+                <h2>Запишитесь прямо сейчас на онлайн собеседование</h2>
+                <p>мы перезвоним вам с уточняющими вопросами в течении 30 минут после заявки</p>
+                <p class="questions__desc">Во время собеседования мы уточним:</p>
+                <div class="online-interview__content">
+                    <div class="content__questions">
+                        <div class="questions__question">
+                            <img draggable="false" src="./icons/question.svg" alt="question">
+                            <p>Какие проекты для вас предпочтительны территориально?</p>
+                        </div>
+                        <div class="questions__question">
+                            <img draggable="false" src="./icons/question.svg" alt="question">
+                            <p>Какой у вас опыт в сфере комплектации/дизайна интерьера?</p>
+                        </div>
+                        <div class="questions__question">
+                            <img draggable="false" src="./icons/question.svg" alt="question">
+                            <p>Желаемый уровень загрузки?</p>
+                        </div>
+                        <div class="notification button-material">
+                            <img draggable="false" src="./icons/info.svg" alt="info">
+                            <p>Если вас устроят все условия работы,
+                                вы можете приступить к работе на следующий день</p>
+                        </div>
+                    </div>
+                    <form>
+                        <p>
+                            Заполните форму, чтобы записаться<br>
+                            на онлайн собеседование
+                        </p>
+                        <span class="name-desc">Введите ваше имя</span>
+                        <span class="tel-desc">Введите ваш телефон</span>
+                        <input id="name" type="text" placeholder="Например, Алексей">
+                        <input id="telephone" data-tel-input type="tel" maxlength="18" placeholder="+7 (___) ___ - __ - __">
+                        <button onclick="event.preventDefault()" class="button button_primary button-material">
+                            Записаться<br>
+                            на собеседование
+                        </button>
+                        <p>
+                            Нажимая на кнопку, вы даёте согласие<br> на обработку персональных данных и<br> соглашаетесь c
+                            <a href="#" class="link_privacy">политикой конфиденциальности</a>
+                        </p>
+                    </form>
+                </div>
+            </section>
+
+            <section class="location">
+                <h2>
+                    Вы всегда можете придти к нам в офис<br>
+                    для личного знакомства
+                </h2>
+                <p>мы с радостью вас встретим и обсудим условия работы</p>
+                <div class="location__content">
+                    <div class="location__info">
+                        <form>
+                            <p>
+                                Заполните форму, чтобы записаться<br>
+                                на прием в офисе
+                            </p>
+                            <span class="name-desc">Введите ваше имя</span>
+                            <span class="tel-desc">Введите ваш телефон</span>
+                            <input id="name" type="text" placeholder="Например, Алексей">
+                            <input id="telephone" data-tel-input type="tel" maxlength="18" placeholder="+7 (___) ___ - __ - __">
+                            <button onclick="event.preventDefault()" class="button button_primary button-material">
+                                Посетить офис
+                            </button>
+                            <p>
+                                Нажимая на кнопку, вы даёте согласие<br> на обработку персональных данных и<br> соглашаетесь c
+                                <a href="#" class="link_privacy">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+                        <div class="notification button-material">
+                            <div>
+                                <h3>Адрес офиса:</h3>
+                                <p>
+                                    г. Москва, ул. Лужнецкая<br>
+                                    наб. 2/4 стр. 17, офис 308
+                                </p>
+                            </div>
+    
+                            <div>
+                                <h3>Контакты:</h3>
+                                <p>
+                                    8 (495) 126-24-89<br>
+                                    info@domeo.ru
+                                </p>
+                            </div>
+    
+                            <div>
+                                <h3>График работы:</h3>
+                                <p>
+                                    С 9.00 до 22.00<br>
+                                    без выходных
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map"></div>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -363,6 +526,12 @@
         </footer>
     </div>
     
+    <!--? Google Maps Api -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSwls6ViGZ9xBkDApO7Rqlidv-JZWn_mo&callback=initMap&libraries=&v=weekly"
+        async
+    ></script>
+
     <script src="./scripts/get-salary.js"></script>
     <script src="./plugins/telephone-mask/index.js"></script>
     <script src="./plugins/material-button/index.js"></script>
